@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- 启动下视摄像头 -->
+  <node pkg="rmtt_driver" type="set_downvision.py" name="set_downvision" />
+  <!-- 准备巡点 -->
+  <node pkg="rmtt_driver" type="view_point.py" name="view_point" output="screen" />
+  <!-- 起飞 -->
+  <node pkg="rostopic" type="rostopic" name="takeoff" args='pub /takeoff std_msgs/Empty' />
+  <!-- 开始巡点 -->
+  <node pkg="rmtt_driver" type="start.py" name="start"  output='screen'/>
+   <!-- 访问下视摄像头，并找目标点 -->
+  <node pkg="rmtt_driver" type="goal_search.py" name="goal_search" output='screen'/>
+</launch>
+
