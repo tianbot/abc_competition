@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find tianbot_mini)/launch/bringup.launch" />
+    <include file="$(find tianbot_mini)/launch/lidar.launch" />
+    <include file="$(find tianbot_mini)/launch/amcl.launch" />
+    <!-- 加param  inflation 的参数修改-->
+
+    <!-- <param  -->
+</launch>
