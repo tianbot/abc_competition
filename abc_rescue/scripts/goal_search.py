@@ -275,7 +275,7 @@ if __name__=='__main__':
         cmd_pub = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
         # land_pub = rospy.Publisher('/land', Empty, queue_size=10)
         throw_pub = rospy.Publisher('/sdk_cmd', String, queue_size=10)
-        arrive_pub = rospy.Publisher("/arrive_goal",Bool,queue_size=10)
+        arrive_pub = rospy.Publisher("/arrive_target",Bool,queue_size=10)
         find_target_pub = rospy.Publisher("/find_tag",Bool,queue_size=10)
         rospy.spin()
     
